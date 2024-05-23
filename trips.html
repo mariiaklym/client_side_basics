@@ -19,7 +19,7 @@
             text-decoration: none;
         }
 
-        h1 {
+        h1, h2{
             padding-top: 20px;
             text-align: center;
             padding-bottom: 20px;
@@ -38,6 +38,7 @@
         }
 
         .nav-links ul {
+            width: 100%;
             display: flex;
             justify-content: flex-end;
             list-style: none;
@@ -95,6 +96,29 @@
             color: inherit;
             text-decoration: none;
         }
+
+        /* Стилі для таблиць */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #D2B48C;
+        }
+
+        /* Стилі для фрейма */
+        .floating-frame {
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }       
     </style>
 </head>
 <body>
@@ -116,6 +140,78 @@
         <a href="images/Trains.jpg" target="_blank">
             <img src="images/Trains.jpg" width="1000" height="600">
         </a>
+        
+        <!-- Перша таблиця -->
+        <h2>Основні маршрути</h2>
+        <table>
+            <tr>
+                <th>Харків-Київ</th>
+                <th>Львів-Київ</th>
+                <th>Одеса-Київ</th>
+            </tr>
+            <tr>
+                <td><img src="images/Kharkiv.webp" alt="Місто 1" width="150" height="110"></td>
+                <td><img src="images/Lviv.webp" alt="Місто 2" width="150" height="110"></td>
+                <td><img src="images/Odesa.webp" alt="Місто 3" width="150" height="110"></td>
+            </tr>
+            <tr>
+                <td><a href="https://booking.uz.gov.ua/?from=2204001&to=2200001&date=today&time=00%3A00&url=train-list">Обрати квиток для маршруту "Харків-Київ"</a></td>
+                <td><a href="https://booking.uz.gov.ua/?from=2218000&to=2200001&date=today&time=00%3A00&url=train-list">Обрати квиток для маршруту "Львів-Київ"</a></td>
+                <td><a href="https://booking.uz.gov.ua/?from=2208001&to=2200001&date=today&time=00%3A00&url=train-list">Обрати квиток для маршруту "Одеса-Київ"</a></td>
+            </tr>
+            <tr>
+                <td>Час в дорозі: приблизно 5-7 годин</td>
+                <td>Час в дорозі: приблизно 7-10 годин</td>
+                <td>Час в дорозі: приблизно 9 годин</td>
+            </tr>
+        </table>
+
+        <!-- Складна таблиця -->
+        <h2>Типи вагонів Укрзалізниці</h2>
+        <table style="border-collapse: separate; border-spacing: 2px;">
+            <colgroup>
+                <col style="background-color:#D2B48C;">
+                <col style="background-color:#FAF0E6;">
+                <col style="background-color:#FAF0E6;">
+            </colgroup>
+            <tr>
+                <th style="text-align: center;">Тип вагону</th>
+                <th style="text-align: center;">Опис</th>
+                <th style="text-align: center;">Особливості</th>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Швидкісні поїзди «Інтерсіті +»</td>
+                <td colspan="2" style="text-align: center;">Високошвидкісні поїзди, що з'єднують великі міста</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="text-align: left;">Пасажирські купейні вагони</td>
+                <td style="text-align: center;">СВ (Люкс)</td>
+                <td style="text-align: center;">2-місні купе з покращеними умовами</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">1 клас</td>
+                <td style="text-align: center;">Комфортабельні 4-місні купе</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">Загальні купейні вагони</td>
+                <td style="text-align: center;">Стандартні 4-місні купе</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Пасажирський некупейний вагон (плацкартний)</td>
+                <td style="text-align: center;">Вагони відкритого типу з ліжками</td>
+                <td style="text-align: center;">Економічний варіант</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Пасажирські вагони 2 класу відкритого типу</td>
+                <td style="text-align: center;">Сидіння відкритого типу, без ліжок</td>
+                <td style="text-align: center;">Для коротких подорожей</td>
+            </tr>
+        </table>
+
+
+        <h2>Як придбати квиток</h2>
+        <!-- Плаваючий фрейм -->
+        <iframe class= "floating-frame" width="1000" height="630" src="https://www.youtube.com/embed/ghAdktdsZeI?si=k6NTwaDUK-rqbw49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>     
 
         <!-- Посилання на рядок поточної сторінки -->
         <a href="#top" class="back-to-top">Нагору</a> 
