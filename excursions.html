@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="dialog.js" defer></script>
     <style type="text/css">
         a:hover{
             color: black !important;
         }
     </style>
 </head>
-<body>
+<body id="excursionsPage">
      <header>
         <!-- Перехід між сторінками -->
         <div class="nav-links">
@@ -37,8 +38,24 @@
             <img src="images/Excursions.jpg" width="1000" height="600">
         </a> 
 
+        <div class="excursion-list" style="text-align: center;">
+            <h2>Оберіть екскурсію:</h2>
+                <ul id="excursionOptions" style="list-style: none;">
+    <li data-action="selectExcursion">Києво-Печерська Лавра</li>
+    <li data-action="selectExcursion">Андріївський узвіз</li>
+    <li data-action="selectExcursion">Музей історії України</li>
+    <li data-action="selectExcursion">Мистецький арсенал</li>
+</ul>
+
+        </div>
+
+        
+
         <!-- Посилання на рядок поточної сторінки -->
         <a href="#top" class="back-to-top">Нагору</a> 
+
+        <p id="mouseOverText" onmouseover="changeTextColor(this)">Від Лаври до узвозу — стежка легенд.</p>
+        <p id="mouseOverTextJS">Відкрийте для себе духовні скарби, приховані в музейних залах</p>
     </div>
 
     <footer>
