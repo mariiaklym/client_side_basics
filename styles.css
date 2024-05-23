@@ -198,3 +198,11 @@ h1:after {
     background: linear-gradient(to right, rgba(210, 180, 140, 0.5), rgba(210, 180, 140, 0));
     margin: 8px auto 20px; /* Центрування та встановлення відступів для ефекту тіні */
 }
+#menu {
+  display: flex;
+  justify-content: center; /* Центрує кнопки горизонтально */
+  padding: 5px; /* Додає відступ всередині блока з кнопками */
+}
+button {
+	margin: 10px;
+}

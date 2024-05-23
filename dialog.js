@@ -1,3 +1,62 @@
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.body.id === 'last-page') {
+        setupDraggableImages();
+        setupImageBorderOnHover();
+    }
+});
+
+function setupDraggableImages() {
+    var draggedImg = null;
+    var shiftX, shiftY;
+
+    var routeImages = document.querySelectorAll('td img');
+    routeImages.forEach(function(image) {
+        image.addEventListener('mousedown', function(event) {
+            draggedImg = event.target;
+            shiftX = event.clientX - draggedImg.getBoundingClientRect().left;
+            shiftY = event.clientY - draggedImg.getBoundingClientRect().top;
+            draggedImg.style.position = 'absolute';
+            draggedImg.style.zIndex = '1000';
+            document.body.appendChild(draggedImg);
+            moveAt(event.pageX, event.pageY);
+            event.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(event) {
+            if (draggedImg) {
+                moveAt(event.pageX, event.pageY);
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            if (draggedImg) {
+                draggedImg.style.zIndex = '';
+                draggedImg = null;
+            }
+        });
+
+        function moveAt(pageX, pageY) {
+            draggedImg.style.left = pageX - shiftX + 'px';
+            draggedImg.style.top = pageY - shiftY + 'px';
+        }
+    });
+}
+
+function setupImageBorderOnHover() {
+    var targetImage = document.querySelector('img[src="images/Trains.jpg"]');
+    if (targetImage) {
+        targetImage.addEventListener('mouseover', function(event) {
+            event.target.style.border = "3px solid #855E42";
+        });
+
+        targetImage.addEventListener('mouseout', function(event) {
+            if (!event.relatedTarget || !event.target.contains(event.relatedTarget)) {
+                event.target.style.border = "";
+            }
+        });
+    }
+}
+
 if (document.body.id === 'indexPage') {
     function userDialog() {
         // Оскільки ім'я користувача вже запитано, продовжимо діалог
@@ -211,4 +270,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
