@@ -28,21 +28,34 @@ p {
 	margin-bottom: 20px;
 }
 
+img {
+	display: block;
+	margin: 15px auto; 
+}
+
+/* Сусідні селектори */
+h1 + p {
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: justify;
+}
+
 /* Верхня панель */
 .nav-links {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: #d2b48c;
 }
-
+/* Контекстний селектор */
 .nav-links ul {
 	display: flex;
 	justify-content: flex-end;
 	list-style: none;
 }
-
-.nav-links ul li {
-	padding-right: 35px;
+/* Дочірній селектор */
+.nav-links ul > li {
+    font-weight: bold;
+    padding-right: 35px;
 }
 
 /* Основна частина */
@@ -59,12 +72,14 @@ p {
 	text-align: center;
 	margin-top: 20px;
 }
+/* Контекстний селектор */
 .remarkable__places li {
     margin: auto;
 	margin-bottom: 40px;
 	display: flex;
 	justify-content: space-between;
 }
+/* Дочірній селектор */
 .remarkable__places li:nth-child(2n){
     flex-direction: row-reverse;
 }
@@ -99,10 +114,6 @@ p {
 .image-container {
 	text-align: center;
 }
-img {
-	display: block;
-	margin: 15px auto; 
-}
 
 /* Нижня панель */
 .bottom-bar {
@@ -119,9 +130,9 @@ img {
 	display: flex;
 	justify-content: space-around;
 }
-.bottom-bar a {
-	color: inherit;
-	text-decoration: none;
+/* Дочірній селектор */
+.bottom-bar ul > li {
+    font-weight: bold;
 }
 
 /* Стилі для таблиць */
