@@ -8,16 +8,30 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
+		<script src="dialog.js" defer></script>
 		<style type="text/css">
-			a:hover {
-    			color: black !important;
+			a:hover{
+   				color: black !important;
 			}
 		</style>
+		<script>
+	        // Приклад застосування функцій alert, prompt, confirm
+	        alert("Ласкаво просимо на наш сайт!");
+	        var userName = prompt("Як вас звати?", "");
+	        var isReady = confirm("Ви готові продовжити?");
+
+	        if (isReady) {
+	            alert("Вітаємо, " + userName + "! Давайте продовжимо.");
+	        } else {
+	            alert("Можливо, ви захочете продовжити пізніше. До побачення, " + userName + "!");
+	        }
+    	</script>
 	</head>
-	<body>
+	<body id="indexPage">
 		<header>
 			<!-- Перехід між сторінками -->
 			<div class="nav-links">
+				<img src="images/image_transparent.png" alt="Опис зображення" class="floating-image">
 				<ul>
 					<li><a href="hotels.html">Готелі</a></li>
 					<li><a href="excursions.html">Екскурсії</a></li>
@@ -25,9 +39,9 @@
 				</ul>
 			</div>
 		</header>
-
+		
 		<div class="container">
-			<h1>Вітаємо у місті Києві!</h1>
+			<h1>Вітаємо у місті <span>Києві</span>!</h1>
 			<p style="font-weight: bold;">
 				Київ - це не тільки столиця України, але й місто з багатою історією та культурою, яке приваблює мандрівників з усього світу. Його вулиці та площі є свідками величних історичних подій, а кожен куточок міста вишукано втілює суміш давніх традицій та сучасного духу. Київ відомий своїми
 				пам'ятками, такими як монументальний Києво-Печерський монастир, чарівний Андріївський узвіз, та історичний Софійський собор. Але це не просто місця на мапі, це живі символи української культури та історії.
@@ -56,7 +70,7 @@
 					</div>
 
 					<a class="remarkable__place image-left" href="images/Andrew's Descent.jpg" target="_blank">
-						<img src="images/Andrew's Descent.jpg" alt="Andrew's Descent"width="650"/>
+						<img src="images/Andrew's Descent.jpg" alt="Andrew's Descent" width="650"/>
 					</a>
 				</li>
 				<li>
@@ -64,7 +78,7 @@
 						<div class="text"><b>Києво-Печерська лавра</b><br> Історичний православний монастирський комплекс, включений до списку світової спадщини ЮНЕСКО.</div>
 					</div>
 					<a class="remarkable__place image-right" href="images/Kyivo-Pecherska Lavra.jpg" target="_blank">
-						<img src="images/Kyivo-Pecherska Lavra.jpg" alt="Kyivo-Pecherska Lavra"width="650"/>
+						<img src="images/Kyivo-Pecherska Lavra.jpg" alt="Kyivo-Pecherska Lavra" width="650"/>
 					</a>
 				</li>
 				<li>
@@ -72,7 +86,7 @@
 						<div class="text"><b>Майдан Незалежності</b><br> Головна та найбільш відома площа Києва, центр громадського та політичного життя.</div>
 					</div>
 					<a class="remarkable__place image-left" href="images/Independence Square.jpeg" target="_blank">
-						<img src="images/Independence Square.jpeg" alt="Independence Square"width="650"/>
+						<img src="images/Independence Square.jpeg" alt="Independence Square" width="650"/>
 					</a>
 				</li>
 				<li>
@@ -80,7 +94,7 @@
 						<div class="text"><b>Золоті Ворота</b><br> Одна з найвідоміших історичних пам'яток Києва, давня в'їзна брама міста.</div>
 					</div>
 					<a class="remarkable__place image-right" href="images/Golden Gate.jpg" target="_blank">
-						<img src="images/Golden Gate.jpg" alt="Golden Gate"width="650"/>
+						<img src="images/Golden Gate.jpg" alt="Golden Gate" width="650"/>
 					</a>
 				</li>
 			</ul>

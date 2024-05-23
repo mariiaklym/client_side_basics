@@ -8,17 +8,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="dialog.js" defer></script>
         <style type="text/css">
-            a:hover {
+            a:hover{
                 color: black !important;
             }
         </style>
     </head>
-    <body>
+    <body id="hotelsPage">
         <header>
              <!-- Перехід між сторінками -->
             <div class="nav-links">
-                <ul>
+                <img src="images/image_transparent.png" alt="Опис зображення" class="floating-image">
+                <ul id="navigationLinks">
                     <li><a href="index.html">Головна сторінка</a></li>
                     <li><a href="excursions.html">Екскурсії</a> </li>
                     <li><a href="trips.html">Подорож "Укрзалізницею"</a></li>
@@ -28,14 +30,14 @@
        
        <div class="container">
            <h1 id="top">Готелі Києва</h1>
-            <p style="font-weight: bold;">Вибір готелю - важливий аспект будь-якої подорожі. Він не тільки забезпечує комфорт та відпочинок після насиченого дня, але й впливає на загальне враження від відвідуваного місця. До уваги відпочиваючих пропонується безліч варіантів готелів, хостелів та апартаментів. Ви можете зупинитися як в центральній частині міста, так і в затишному передмісті.</p> 
+            <p id="description" style="font-weight: bold;">Вибір готелю - важливий аспект будь-якої подорожі. Він не тільки забезпечує комфорт та відпочинок після насиченого дня, але й впливає на загальне враження від відвідуваного місця. До уваги відпочиваючих пропонується безліч варіантів готелів, хостелів та апартаментів. Ви можете зупинитися як в центральній частині міста, так і в затишному передмісті.</p> 
 
             <a href="images/Hotels.jpg" target="_blank">
                 <img src="images/Hotels.jpg" width="1000" height="600">
             </a> 
 
             <!-- Посилання на рядок поточної сторінки -->
-            <a href="#top" class="back-to-top">Нагору</a> 
+            <a href="#top" id= "backToTopLink" class="back-to-top">Нагору</a> 
        </div>
 
         <footer>
