@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Київ - перлина туризму</title>
+		<meta name="author" content="Клименко Марія" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Montserrat', sans-serif;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+			}
+
+			h1,
+			h2 {
+				padding-top: 20px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			p {
+				text-indent: 20px;
+				margin-bottom: 20px;
+			}
+
+			/* Верхня панель */
+			.nav-links {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				background-color: #d2b48c;
+			}
+
+			.nav-links ul {
+				display: flex;
+				justify-content: flex-end;
+				list-style: none;
+			}
+
+			.nav-links ul li {
+				padding-right: 35px;
+			}
+
+			/* Основна частина */
+			.container {
+				padding: 0 20px;
+				padding-bottom: 70px;
+				background-color: #faf0e6;
+			}
+			#landmarks {
+				margin-top: 35px;
+			}
+			.remarkable__places {
+				list-style: none;
+				text-align: center;
+				margin-top: 20px;
+			}
+			.remarkable__places li {
+                margin: auto;
+				margin-bottom: 40px;
+				display: flex;
+				justify-content: space-between;
+			}
+            .remarkable__places li:nth-child(2n){
+                flex-direction: row-reverse;
+            }
+
+			.remarkable__place {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.remarkable__place__descr {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+				flex: 1;
+				padding: 0 10px;
+			}
+			.map {
+				display: block;
+				text-align: center;
+				padding: 15px 15px;
+				background-color:#d2b48c;
+				width: 180px;
+				margin: 20px auto;
+				border-radius: 10px;
+			}
+
+			.map:hover{
+				background-color: transparent;
+				border: 2px solid #d2b48c;
+				padding: 13px 13px;
+			}
+			.image-container {
+				text-align: center;
+			}
+			img {
+				display: block;
+			}
+
+			/* Нижня панель */
+			.bottom-bar {
+				background-color: #d2b48c;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				padding: 25px 0;
+			}
+			.bottom-bar ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: space-around;
+			}
+			.bottom-bar a {
+				color: inherit;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<!-- Перехід між сторінками -->
+			<div class="nav-links">
+				<ul>
+					<li><a href="hotels.html">Готелі</a></li>
+					<li><a href="excursions.html">Екскурсії</a></li>
+					<li><a href="trips.html">Подорож "Укрзалізницею"</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="container">
+			<h1>Вітаємо у місті Києві!</h1>
+			<p>
+				Київ - це не тільки столиця України, але й місто з багатою історією та культурою, яке приваблює мандрівників з усього світу. Його вулиці та площі є свідками величних історичних подій, а кожен куточок міста вишукано втілює суміш давніх традицій та сучасного духу. Київ відомий своїми
+				пам'ятками, такими як монументальний Києво-Печерський монастир, чарівний Андріївський узвіз, та історичний Софійський собор. Але це не просто місця на мапі, це живі символи української культури та історії.
+			</p>
+
+			<!-- Зображення як гіперпосилання -->
+			<a href="images/Kyiv.png" target="_blank">
+				<img src="images/Kyiv.png" alt="Kyiv" width="512" height="512"  style="display:block; margin: auto;" />
+			</a>
+
+			<h2 id="landmarks">Визначні місця Києва</h2>
+
+			<ul class="remarkable__places">
+				<li>
+					<div class="remarkable__place__descr">
+						<div class="text"><b>Софійський собор</b><br> Один з найстаріших та найзначніших храмів Києва.</div>
+					</div>
+
+					<a class="remarkable__place image-right" href="images/Saint Sophia Cathedral.jpeg" target="_blank">
+						<img src="images/Saint Sophia Cathedral.jpeg" alt="Saint Sophia Cathedral" width="650"/>
+					</a>
+				</li>
+				<li>
+					<div class="remarkable__place__descr">
+						<div class="text"><b>Андріївський узвіз</b><br> Історична вулиця, відома своїми мистецькими галереями та сувенірними крамницями.</div>
+					</div>
+
+					<a class="remarkable__place image-left" href="images/Andrew's Descent.jpg" target="_blank">
+						<img src="images/Andrew's Descent.jpg" alt="Andrew's Descent"width="650"/>
+					</a>
+				</li>
+				<li>
+					<div class="remarkable__place__descr">
+						<div class="text"><b>Києво-Печерська лавра</b><br> Історичний православний монастирський комплекс, включений до списку світової спадщини ЮНЕСКО.</div>
+					</div>
+					<a class="remarkable__place image-right" href="images/Kyivo-Pecherska Lavra.jpg" target="_blank">
+						<img src="images/Kyivo-Pecherska Lavra.jpg" alt="Kyivo-Pecherska Lavra"width="650"/>
+					</a>
+				</li>
+				<li>
+					<div class="remarkable__place__descr">
+						<div class="text"><b>Майдан Незалежності</b><br> Головна та найбільш відома площа Києва, центр громадського та політичного життя.</div>
+					</div>
+					<a class="remarkable__place image-left" href="images/Independence Square.jpeg" target="_blank">
+						<img src="images/Independence Square.jpeg" alt="Independence Square"width="650"/>
+					</a>
+				</li>
+				<li>
+					<div class="remarkable__place__descr">
+						<div class="text"><b>Золоті Ворота</b><br> Одна з найвідоміших історичних пам'яток Києва, давня в'їзна брама міста.</div>
+					</div>
+					<a class="remarkable__place image-right" href="images/Golden Gate.jpg" target="_blank">
+						<img src="images/Golden Gate.jpg" alt="Golden Gate"width="650"/>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Зовнішнє посилання -->
+			<a class="map" href="https://www.google.com/maps/place/Київ,+Україна,+02000/@50.4172275,30.4266925,10.38z/data=!4m6!3m5!1s0x40d4cf4ee15a4505:0x764931d2170146fe!8m2!3d50.4503596!4d30.5245025!16zL20vMDJzbjM0?hl=uk&entry=ttu" target="_blank">Мапа міста Київ</a>
+		</div>
+
+		<footer>
+			<div class="bottom-bar">
+				<ul>
+					<!-- Посилання на рядок поточної сторінки -->
+					<li><a href="index.html#landmarks">Визначні місця</a></li>
+					<!-- Перехід на певний рядок іншої сторінки-->
+					<li><a href="hotels.html#places">Вибір готелю</a></li>
+					<li><a href="excursions.html#excursions">Вибір екскурсії</a></li>
+					<li><a href="trips.html#trips">Вибір квитків на потяг</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
